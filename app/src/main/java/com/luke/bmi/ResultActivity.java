@@ -14,5 +14,6 @@ public class ResultActivity extends AppCompatActivity {
         float bmi = getIntent().getFloatExtra("EXTRA_BMI", 0);
         TextView tv_Result = (TextView) findViewById(R.id.tv_Text);
         tv_Result.setText("BMI is :"+bmi);
+        //update
     }
 }
