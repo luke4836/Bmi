@@ -1,6 +1,7 @@
 package com.luke.bmi;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -74,16 +75,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 float geth = Float.parseFloat(edHeight.getText().toString());
 
                 float bmi = getw / (geth * geth);
+                Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+                intent.putExtra("EXTRA_BMI", bmi);
+                startActivity(intent);
 
                 Log.d("BMI:", String.valueOf(bmi));
                 Toast.makeText(MainActivity.this, "BMI:" + bmi, Toast.LENGTH_LONG).show();
-                new AlertDialog.Builder(MainActivity.this)
-                        .setTitle(getString(R.string.alertdialog_tite))
-                        .setMessage("Your BMI is :" + bmi)
-                        .setPositiveButton("OK", null)
-                        .setNegativeButton("Cancel", null)
-                        .setNeutralButton("中性按鈕", null)
-                        .show();
+//                new AlertDialog.Builder(MainActivity.this)
+//                        .setTitle(getString(R.string.alertdialog_tite))
+//                        .setMessage("Your BMI is :" + bmi)
+//                        .setPositiveButton("OK", null)
+//                        .setNegativeButton("Cancel", null)
+//                        .setNeutralButton("中性按鈕", null)
+//                        .show();
             }
         });
 
