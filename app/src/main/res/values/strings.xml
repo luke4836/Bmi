@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bmi</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="calc_bmi">Calc BMI</string>
+    <string name="alertdialog_tite">Title</string>
+</resources>
